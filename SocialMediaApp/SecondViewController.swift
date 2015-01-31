@@ -10,6 +10,26 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var inputTextField: UITextField!
+    
+    @IBAction func postButtonPressed(sender: AnyObject) {
+        
+        if inputTextField.text != ""{
+            var object = PFObject(className: "Posts")
+            object.addObject(kCurrentUser.username, forKey: "username")
+            object.addObject(true, forKey: "text")
+ //           object.addObject(nil, forKey: "image")
+            object.addObject(0, forKey: "Likes")
+            object.addObject((kCurrentUser.objectForKey("profilePicture")[0]), forKey: "profilePicture")
+            object.addObject(inputTextField.text, forKey: "message")
+            
+            object.save()
+            Global.showAlert("Saved", message: "the post has been published", view: self)
+            
+       }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
