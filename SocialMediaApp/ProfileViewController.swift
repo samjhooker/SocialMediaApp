@@ -1,19 +1,19 @@
-//
-//  FirstViewController.swift
-//  SocialMediaApp
-//
-//  Created by Samuel Hooker on 30/01/15.
-//  Copyright (c) 2015 Jocus Interactive. All rights reserved.
-//
+
+
+
+
+
+
 
 import UIKit
 
-class FirstViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
-
+class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+    
     var listOfEveryting:[PFObject]! = []
     
-    
     @IBOutlet weak var tableView: UITableView!
+    
+    //@IBOutlet weak var tableView: UITableView!
     
     
     override func viewDidLoad() {
@@ -23,7 +23,7 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.pullData()
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -34,7 +34,7 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         return listOfEveryting.count + 1
         
-    
+        
     }
     
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
@@ -42,18 +42,19 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     
-
+    
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         //var cell:UITableViewCell!
         
         if indexPath.row == 0{
-            var cell = tableView.dequeueReusableCellWithIdentifier("headerCell") as HeaderTableViewCell
+            var cell = tableView.dequeueReusableCellWithIdentifier("profileHeaderCell") as ProfileHeaderTableViewCell
+            cell.ViewController = self
             return cell
         }else{
             
-           
+            
             
             var a = listOfEveryting[indexPath.row - 1]
             
@@ -81,7 +82,7 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
             }
             
             
-        
+            
             
             
         }
@@ -107,12 +108,12 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
         
         if indexPath.row == 0 {
-            return 185
+            return 284
         }
         else if (listOfEveryting[indexPath.row - 1].objectForKey("text")[0] as Int) == 1{
-            return 136
+            return 104
         }else{
-            return 224
+            return 190
         }
         
         
@@ -125,8 +126,11 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     func pullData(){
         
         var query = PFQuery(className: "Posts")
+        //query.ascending("createdAt")
         query.addDescendingOrder("createdAt")
+        query.whereKey("username", equalTo: PFUser.currentUser().username)
         query.limit = 30
+        
         
         query.findObjectsInBackgroundWithBlock { (objects:[AnyObject]!, error:NSError!) -> Void in
             
@@ -148,7 +152,6 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         
     }
-
-
+    
+    
 }
-

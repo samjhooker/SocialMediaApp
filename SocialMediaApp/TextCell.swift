@@ -28,11 +28,34 @@ class TextCell: UITableViewCell {
     
     @IBAction func likesButtonPressed(sender: AnyObject) {
         
-        var likesNumber = object.objectForKey("Likes")[0] as Int
-        object["likes"] = [likesNumber++]
+        
+        
+        
+        var query = PFQuery(className: "Posts")
+        query.getObjectInBackgroundWithId(object.objectId, block: { (obj:PFObject!, error:NSError!) -> Void in
+            
+            if error != nil{
+                println("Update error \(error.localizedDescription)")
+            }else{
+                
+                var likesNumber = obj.objectForKey("Likes")[0] as Int
+                obj["Likes"] = [likesNumber + 1]
+                self.likesButton.setTitle("\(likesNumber + 1) likes", forState: UIControlState.Normal)
+                obj.save()
+            }
+            
+        })
         
         
     }
+    
+    
+    
+    
+    
+    
+    
+    
     
     override func awakeFromNib() {
         println(object)

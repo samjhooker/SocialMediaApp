@@ -38,6 +38,8 @@
 		7E2911C01A7C13AC002C43A0 /* MRG_Head-Icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7E2911BF1A7C13AC002C43A0 /* MRG_Head-Icon.jpg */; };
 		7E2911C21A7C18AB002C43A0 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2911C11A7C18AB002C43A0 /* loginViewController.swift */; };
 		7E2911C41A7C42D6002C43A0 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2911C31A7C42D6002C43A0 /* HeaderTableViewCell.swift */; };
+		7E61B2BB1A7DFCF00081846C /* ProfileHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E61B2BA1A7DFCF00081846C /* ProfileHeaderTableViewCell.swift */; };
+		7E61B2BD1A7DFE580081846C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E61B2BC1A7DFE580081846C /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		7E2911BF1A7C13AC002C43A0 /* MRG_Head-Icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "MRG_Head-Icon.jpg"; sourceTree = "<group>"; };
 		7E2911C11A7C18AB002C43A0 /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		7E2911C31A7C42D6002C43A0 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		7E61B2BA1A7DFCF00081846C /* ProfileHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		7E61B2BC1A7DFE580081846C /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,13 +98,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E2911AC1A7C09E8002C43A0 /* MobileCoreServices.framework in Frameworks */,
 				7E2911B81A7C0A27002C43A0 /* Security.framework in Frameworks */,
 				7E2911B61A7C0A20002C43A0 /* AudioToolbox.framework in Frameworks */,
 				7E2911B41A7C0A13002C43A0 /* CFNetwork.framework in Frameworks */,
 				7E2911B21A7C0A0B002C43A0 /* CoreGraphics.framework in Frameworks */,
 				7E2911B01A7C09FE002C43A0 /* CoreLocation.framework in Frameworks */,
 				7E2911AE1A7C09F6002C43A0 /* libz.dylib in Frameworks */,
-				7E2911AC1A7C09E8002C43A0 /* MobileCoreServices.framework in Frameworks */,
 				7E2911AA1A7C09DC002C43A0 /* QuartzCore.framework in Frameworks */,
 				7E2911A81A7C09D1002C43A0 /* StoreKit.framework in Frameworks */,
 				7E2911A61A7C09C9002C43A0 /* SystemConfiguration.framework in Frameworks */,
@@ -154,6 +158,8 @@
 				7E2911771A7C0831002C43A0 /* CreateAccountViewController.swift */,
 				7E2911C11A7C18AB002C43A0 /* loginViewController.swift */,
 				7E2911551A7B7F85002C43A0 /* Main.storyboard */,
+				7E61B2BA1A7DFCF00081846C /* ProfileHeaderTableViewCell.swift */,
+				7E61B2BC1A7DFE580081846C /* ProfileViewController.swift */,
 				7E2911731A7B8901002C43A0 /* TextCell.swift */,
 				7E2911711A7B869C002C43A0 /* ContentCell.swift */,
 				7E2911751A7C0796002C43A0 /* Global.swift */,
@@ -319,7 +325,9 @@
 				7E2911C41A7C42D6002C43A0 /* HeaderTableViewCell.swift in Sources */,
 				7E2911741A7B8901002C43A0 /* TextCell.swift in Sources */,
 				7E2911541A7B7F85002C43A0 /* SecondViewController.swift in Sources */,
+				7E61B2BB1A7DFCF00081846C /* ProfileHeaderTableViewCell.swift in Sources */,
 				7E2911761A7C0796002C43A0 /* Global.swift in Sources */,
+				7E61B2BD1A7DFE580081846C /* ProfileViewController.swift in Sources */,
 				7E2911C21A7C18AB002C43A0 /* loginViewController.swift in Sources */,
 				7E2911501A7B7F85002C43A0 /* AppDelegate.swift in Sources */,
 				7E2911521A7B7F85002C43A0 /* FirstViewController.swift in Sources */,
@@ -538,6 +546,7 @@
 				7E29116D1A7B7F85002C43A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E29116E1A7B7F85002C43A0 /* Build configuration list for PBXNativeTarget "SocialMediaAppTests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +555,7 @@
 				7E2911701A7B7F85002C43A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
