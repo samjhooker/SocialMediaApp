@@ -34,12 +34,6 @@ class textPostViewController: UIViewController {
         //shadosws for views
         
         
-        let shadowPath = UIBezierPath(rect: whiteView.bounds)
-        whiteView.layer.masksToBounds = false
-        whiteView.layer.shadowColor = UIColor.blackColor().CGColor
-        whiteView.layer.shadowOffset = CGSizeMake(0.5, 0.5)
-        whiteView.layer.shadowOpacity = 0.2
-        whiteView.layer.shadowPath = shadowPath.CGPath
         
         let shadowPath2 = UIBezierPath(rect: otherWhiteView.bounds)
         otherWhiteView.layer.masksToBounds = false
@@ -94,7 +88,23 @@ class textPostViewController: UIViewController {
     
 
     @IBAction func viewFullProfileTouched(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier("toFriendsProfileSegue", sender: object.objectForKey("username")[0])
+        
+        
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        var view = segue.destinationViewController as RandomUserProfileViewController
+        view.username = sender as String
+        
+    }
+    
+    
+    
+    
+    
     @IBAction func likeButtonPressed(sender: AnyObject) {
         var query = PFQuery(className: "Posts")
         query.getObjectInBackgroundWithId(object.objectId, block: { (obj:PFObject!, error:NSError!) -> Void in

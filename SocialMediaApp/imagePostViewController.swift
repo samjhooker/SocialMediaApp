@@ -101,9 +101,28 @@ class imagePostViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    
     @IBAction func profileButtonPressed(sender: AnyObject) {
+        self.performSegueWithIdentifier("toFriendsProfileSegue", sender: object.objectForKey("username")[0])
+        
+        
     }
-
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        var view = segue.destinationViewController as RandomUserProfileViewController
+        view.username = sender as String
+        
+    }
+    
+    
+    
+    
+    
+    
+    
     @IBAction func likeButtonPressed(sender: AnyObject) {
         var query = PFQuery(className: "Posts")
         query.getObjectInBackgroundWithId(object.objectId, block: { (obj:PFObject!, error:NSError!) -> Void in

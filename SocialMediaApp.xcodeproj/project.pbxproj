@@ -39,6 +39,10 @@
 		7E2911C21A7C18AB002C43A0 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2911C11A7C18AB002C43A0 /* loginViewController.swift */; };
 		7E2911C41A7C42D6002C43A0 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2911C31A7C42D6002C43A0 /* HeaderTableViewCell.swift */; };
 		7E3369241A7EF7A300E2B1F9 /* imagePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3369231A7EF7A300E2B1F9 /* imagePostViewController.swift */; };
+		7E3369261A7F1DC100E2B1F9 /* FriendListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3369251A7F1DC100E2B1F9 /* FriendListTableViewCell.swift */; };
+		7E3369281A7F1F4600E2B1F9 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3369271A7F1F4600E2B1F9 /* FriendsViewController.swift */; };
+		7E33692A1A7F706B00E2B1F9 /* RandomUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3369291A7F706B00E2B1F9 /* RandomUserProfileViewController.swift */; };
+		7E33692C1A7F70BF00E2B1F9 /* RandomProfileHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E33692B1A7F70BF00E2B1F9 /* RandomProfileHeaderTableViewCell.swift */; };
 		7E61B2BB1A7DFCF00081846C /* ProfileHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E61B2BA1A7DFCF00081846C /* ProfileHeaderTableViewCell.swift */; };
 		7E61B2BD1A7DFE580081846C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E61B2BC1A7DFE580081846C /* ProfileViewController.swift */; };
 		7E61B2BF1A7EECA30081846C /* textPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E61B2BE1A7EECA30081846C /* textPostViewController.swift */; };
@@ -92,6 +96,10 @@
 		7E2911C11A7C18AB002C43A0 /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		7E2911C31A7C42D6002C43A0 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		7E3369231A7EF7A300E2B1F9 /* imagePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imagePostViewController.swift; sourceTree = "<group>"; };
+		7E3369251A7F1DC100E2B1F9 /* FriendListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendListTableViewCell.swift; sourceTree = "<group>"; };
+		7E3369271A7F1F4600E2B1F9 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		7E3369291A7F706B00E2B1F9 /* RandomUserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomUserProfileViewController.swift; sourceTree = "<group>"; };
+		7E33692B1A7F70BF00E2B1F9 /* RandomProfileHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomProfileHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		7E61B2BA1A7DFCF00081846C /* ProfileHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		7E61B2BC1A7DFE580081846C /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7E61B2BE1A7EECA30081846C /* textPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = textPostViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +170,10 @@
 				7E2911771A7C0831002C43A0 /* CreateAccountViewController.swift */,
 				7E2911C11A7C18AB002C43A0 /* loginViewController.swift */,
 				7E2911551A7B7F85002C43A0 /* Main.storyboard */,
+				7E33692B1A7F70BF00E2B1F9 /* RandomProfileHeaderTableViewCell.swift */,
+				7E3369291A7F706B00E2B1F9 /* RandomUserProfileViewController.swift */,
+				7E3369271A7F1F4600E2B1F9 /* FriendsViewController.swift */,
+				7E3369251A7F1DC100E2B1F9 /* FriendListTableViewCell.swift */,
 				7E3369231A7EF7A300E2B1F9 /* imagePostViewController.swift */,
 				7E61B2BE1A7EECA30081846C /* textPostViewController.swift */,
 				7E61B2BA1A7DFCF00081846C /* ProfileHeaderTableViewCell.swift */,
@@ -327,7 +339,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E33692A1A7F706B00E2B1F9 /* RandomUserProfileViewController.swift in Sources */,
 				7E2911781A7C0831002C43A0 /* CreateAccountViewController.swift in Sources */,
+				7E3369281A7F1F4600E2B1F9 /* FriendsViewController.swift in Sources */,
 				7E2911C41A7C42D6002C43A0 /* HeaderTableViewCell.swift in Sources */,
 				7E2911741A7B8901002C43A0 /* TextCell.swift in Sources */,
 				7E2911541A7B7F85002C43A0 /* SecondViewController.swift in Sources */,
@@ -336,6 +350,8 @@
 				7E61B2BD1A7DFE580081846C /* ProfileViewController.swift in Sources */,
 				7E3369241A7EF7A300E2B1F9 /* imagePostViewController.swift in Sources */,
 				7E2911C21A7C18AB002C43A0 /* loginViewController.swift in Sources */,
+				7E33692C1A7F70BF00E2B1F9 /* RandomProfileHeaderTableViewCell.swift in Sources */,
+				7E3369261A7F1DC100E2B1F9 /* FriendListTableViewCell.swift in Sources */,
 				7E2911501A7B7F85002C43A0 /* AppDelegate.swift in Sources */,
 				7E61B2BF1A7EECA30081846C /* textPostViewController.swift in Sources */,
 				7E2911521A7B7F85002C43A0 /* FirstViewController.swift in Sources */,
