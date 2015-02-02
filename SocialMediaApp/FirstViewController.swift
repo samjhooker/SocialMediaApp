@@ -29,6 +29,24 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "feedToTextPostSegue") {
+            
+            var view = segue.destinationViewController as textPostViewController
+            view.object = sender as PFObject
+            
+        } else if (segue.identifier == "feedToImagePostSegue") {
+            
+            var view = segue.destinationViewController as imagePostViewController
+            view.object = sender as PFObject
+            
+        }
+    }
+    
+    
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         
@@ -41,6 +59,30 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         //nil
     }
     
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if indexPath.row == 0{
+            //do nothing
+        }
+        
+        else if (listOfEveryting[indexPath.row - 1].objectForKey("text")[0] as Int) == 1{
+            
+            //text cell tapped
+            self.performSegueWithIdentifier("feedToTextPostSegue", sender: listOfEveryting[indexPath.row - 1] as PFObject)
+            
+        } else{
+            
+            //image cell tapped
+            self.performSegueWithIdentifier("feedToImagePostSegue", sender: listOfEveryting[indexPath.row - 1] as PFObject)
+            
+        }
+        
+        
+    }
+    
+    
+
     
 
     

@@ -109,7 +109,7 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate, U
             
             
             var object = PFObject(className: "Posts")
-            object.addObject(kCurrentUser.username, forKey: "username")
+            object.addObject(PFUser.currentUser().username, forKey: "username")
             object.addObject(false, forKey: "text")
             
             let imageData = UIImageJPEGRepresentation(self.imagePost as UIImage, 0.3)

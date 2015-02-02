@@ -37,8 +37,45 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         
     }
     
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        //nil
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "profileToTextSegue") {
+            
+            var view = segue.destinationViewController as textPostViewController
+            view.object = sender as PFObject
+            
+        } else if (segue.identifier == "feedToImagePostSegue") {
+            
+            var view = segue.destinationViewController as imagePostViewController
+            view.object = sender as PFObject
+            
+        }
+    }
+    
+    
+    
+    
+    
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if indexPath.row == 0{
+            //do nothing
+        }
+            
+        else if (listOfEveryting[indexPath.row - 1].objectForKey("text")[0] as Int) == 1{
+            
+            //text cell tapped
+            self.performSegueWithIdentifier("profileToTextSegue", sender: listOfEveryting[indexPath.row - 1] as PFObject)
+            
+        } else{
+            
+            //image cell tapped
+            self.performSegueWithIdentifier("feedToImagePostSegue", sender: listOfEveryting[indexPath.row - 1] as PFObject)
+            
+        }
+        
     }
     
     
@@ -111,9 +148,9 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
             return 284
         }
         else if (listOfEveryting[indexPath.row - 1].objectForKey("text")[0] as Int) == 1{
-            return 104
+            return 136
         }else{
-            return 190
+            return 224
         }
         
         

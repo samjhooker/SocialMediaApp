@@ -20,6 +20,8 @@ class ProfileHeaderTableViewCell: UITableViewCell, UIImagePickerControllerDelega
     
     @IBOutlet var profilePictureImageView: UIImageView!
     
+    @IBOutlet weak var profilePictureCircleView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -34,9 +36,22 @@ class ProfileHeaderTableViewCell: UITableViewCell, UIImagePickerControllerDelega
             (imageData: NSData!, error: NSError!) -> Void in
             if error == nil {
                 self.profilePictureImageView.image = UIImage(data:imageData)
+                self.profilePictureCircleView.image = UIImage(data:imageData)
             }
         }
         
+        profilePictureImageView.layer.masksToBounds = true
+        var blur:UIBlurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+        var effectView:UIVisualEffectView = UIVisualEffectView (effect: blur)
+        effectView.frame = profilePictureImageView.frame
+        profilePictureImageView.addSubview(effectView)
+        
+        profilePictureCircleView.layer.borderWidth=3.0
+        profilePictureCircleView.layer.masksToBounds = false
+        profilePictureCircleView.layer.borderColor = UIColor.whiteColor().CGColor
+        profilePictureCircleView.layer.cornerRadius = 13
+        profilePictureCircleView.layer.cornerRadius = profilePictureCircleView.frame.size.height/2
+        profilePictureCircleView.clipsToBounds = true
         
     }
 
@@ -89,6 +104,29 @@ class ProfileHeaderTableViewCell: UITableViewCell, UIImagePickerControllerDelega
         
         PFUser.currentUser()["profilePicture"] = [file]
         PFUser.currentUser().save()
+        
+        
+        //set profile pic as post
+        var object = PFObject(className: "Posts")
+        object.addObject(PFUser.currentUser().username, forKey: "username")
+        object.addObject(false, forKey: "text")
+        
+        let imageData = UIImageJPEGRepresentation(image as UIImage, 0.3)
+        let imageFile: PFFile = PFFile(data: imageData)
+        let thumbnailData = UIImageJPEGRepresentation(image as UIImage, 0.05)
+        let thumbnailFile: PFFile = PFFile(data: imageData)
+        
+        
+        object.addObject(imageFile, forKey: "image")
+        object.addObject(thumbnailFile, forKey: "thumbnail")
+        
+        
+        
+        object.addObject(0, forKey: "Likes")
+        object.addObject((kCurrentUser.objectForKey("profilePicture")[0]), forKey: "profilePicture")
+        //object.addObject(inputTextField.text, forKey: "message")
+        
+        object.save()
         
         ViewController.dismissViewControllerAnimated(true, completion: nil)
         //ViewController.pullData()

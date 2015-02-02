@@ -25,6 +25,7 @@ class TextCell: UITableViewCell {
     
     @IBOutlet weak var timeLabel: UILabel!
     
+    @IBOutlet weak var whiteView: UIView!
     
     @IBAction func likesButtonPressed(sender: AnyObject) {
         
@@ -58,7 +59,16 @@ class TextCell: UITableViewCell {
     
     
     override func awakeFromNib() {
-        println(object)
+        
+        
+        let shadowPath = UIBezierPath(rect: whiteView.bounds)
+        whiteView.layer.masksToBounds = false
+        whiteView.layer.shadowColor = UIColor.blackColor().CGColor
+        whiteView.layer.shadowOffset = CGSizeMake(0.5, 0.5)
+        whiteView.layer.shadowOpacity = 0.2
+        whiteView.layer.shadowPath = shadowPath.CGPath
+        
+        
         if object != nil{
             println("object is awesome \(object)")
             //retrieve image
@@ -124,7 +134,7 @@ class TextCell: UITableViewCell {
             
             var likesNumber: AnyObject! = object.objectForKey("Likes")[0]
             
-            likesButton.setTitle("\(likesNumber) likes", forState: UIControlState.Normal)
+            likesButton.setTitle("LIKE", forState: UIControlState.Normal)
         
     }
 

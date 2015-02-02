@@ -24,6 +24,8 @@ class ContentCell: UITableViewCell {
     
     @IBOutlet weak var likesButton: UIButton!
     
+    @IBOutlet weak var whiteView: UIView!
+    
     
     @IBAction func likesButtonPressed(sender: AnyObject) {
         
@@ -47,6 +49,18 @@ class ContentCell: UITableViewCell {
     
     
     override func layoutSubviews() {
+        
+        
+        let shadowPath = UIBezierPath(rect: whiteView.bounds)
+        whiteView.layer.masksToBounds = false
+        whiteView.layer.shadowColor = UIColor.blackColor().CGColor
+        whiteView.layer.shadowOffset = CGSizeMake(0.5, 0.5)
+        whiteView.layer.shadowOpacity = 0.2
+        whiteView.layer.shadowPath = shadowPath.CGPath
+        
+        
+        
+        
         
         //profile pic
         
@@ -77,13 +91,15 @@ class ContentCell: UITableViewCell {
             }
         }
         
+        mainImageView.layer.masksToBounds = true
+        
         
         //other stuff
         
         usernameLabel.text = object.objectForKey("username")[0] as? String
         var likesNumber: AnyObject! = object.objectForKey("Likes")[0]
         
-        likesButton.setTitle("\(likesNumber) likes", forState: UIControlState.Normal)
+        likesButton.setTitle("LIKE", forState: UIControlState.Normal)
         
         
         
