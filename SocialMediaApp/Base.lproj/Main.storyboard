@@ -284,12 +284,11 @@
                         <outlet property="profilePictureImageView" destination="8Wt-re-Mcv" id="He9-6K-Qyz"/>
                         <outlet property="textLabel" destination="he0-X4-s2t" id="bGl-Ey-RRM"/>
                         <outlet property="whiteView" destination="Ul8-Ep-lIM" id="oLz-0f-ab5"/>
-                        <segue destination="rNI-cc-Qvn" kind="show" identifier="toFriendsProfileSegue" id="gta-2j-BMc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="25k-lw-qx4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1564.5" y="-431.5"/>
+            <point key="canvasLocation" x="1230.5" y="-317.5"/>
         </scene>
         <!--Image Post View Controller-->
         <scene sceneID="TPR-oX-GA6">
@@ -377,7 +376,6 @@
                         <outlet property="profileButton" destination="fWJ-Gi-Zln" id="SlP-sI-MHx"/>
                         <outlet property="profilePictureImageView" destination="L0X-9u-fmm" id="1Pv-GF-JIg"/>
                         <outlet property="whiteView" destination="vyk-zN-fYR" id="Us4-71-GAI"/>
-                        <segue destination="rNI-cc-Qvn" kind="show" id="LIV-Yb-HVV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="npc-7F-juh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -784,286 +782,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ap8-u9-InX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="756.5" y="1189.5"/>
-        </scene>
-        <!--Profile-->
-        <scene sceneID="KU5-cT-NAf">
-            <objects>
-                <viewController id="rNI-cc-Qvn" customClass="RandomUserProfileViewController" customModule="SocialMediaApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="WPL-ZM-8gW"/>
-                        <viewControllerLayoutGuide type="bottom" id="muN-MG-eC6"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="XsE-9e-MSV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNK-pv-cke">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Friends Profile" id="eov-ev-npD">
-                                        <barButtonItem key="leftBarButtonItem" image="Back" id="h3l-4M-3rJ">
-                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <connections>
-                                                <action selector="backButtonPressed:" destination="rNI-cc-Qvn" id="SJ8-yV-szV"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="284" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="2lc-M6-CI2">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="profileHeaderCell" rowHeight="284" id="jqg-lM-eot" customClass="RandomProfileHeaderTableViewCell" customModule="SocialMediaApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jqg-lM-eot" id="dvt-3c-Utf">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Blurred_Background_20" translatesAutoresizingMaskIntoConstraints="NO" id="sky-vZ-tSL">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
-                                                </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQn-ik-agM">
-                                                    <rect key="frame" x="176" y="252" width="191" height="30"/>
-                                                    <state key="normal" title="tap to edit">
-                                                        <color key="titleColor" red="0.13725490200000001" green="0.71764705880000002" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="friendButtonPressed:" destination="jqg-lM-eot" eventType="touchUpInside" id="cCd-4M-amn"/>
-                                                    </connections>
-                                                </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name Goes Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W79-qT-vgf">
-                                                    <rect key="frame" x="8" y="194" width="359" height="62"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MRG_Head-Icon.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="eWy-oC-1jn">
-                                                    <rect key="frame" x="88" y="8" width="199" height="199"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="friendButton" destination="bQn-ik-agM" id="cP9-GH-fgc"/>
-                                            <outlet property="profilePictureCircleView" destination="eWy-oC-1jn" id="T7H-oq-Ll8"/>
-                                            <outlet property="profilePictureImageView" destination="sky-vZ-tSL" id="Ndi-0m-zxy"/>
-                                            <outlet property="usernameLabel" destination="W79-qT-vgf" id="9fA-pO-8PQ"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageCell" rowHeight="224" id="R7r-tp-KOd" customClass="ContentCell" customModule="SocialMediaApp" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="74" width="375" height="224"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R7r-tp-KOd" id="lFJ-7R-qdb">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7m7-Au-oAG">
-                                                    <rect key="frame" x="8" y="8" width="359" height="216"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15 seconds ago" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rk-pc-Kle">
-                                                            <rect key="frame" x="82" y="32" width="110" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UserName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFx-cQ-bwH">
-                                                            <rect key="frame" x="82" y="10" width="82" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" red="0.10980392160000001" green="0.52941176469999995" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </view>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Intro" translatesAutoresizingMaskIntoConstraints="NO" id="D7j-at-Ao5">
-                                                    <rect key="frame" x="8" y="66" width="359" height="158"/>
-                                                </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kzj-BR-mIh">
-                                                    <rect key="frame" x="275" y="167" width="92" height="35"/>
-                                                    <color key="backgroundColor" red="0.13725490200000001" green="0.71764705880000002" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <state key="normal" title="n likes">
-                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="likesButtonPressed:" destination="R7r-tp-KOd" eventType="touchUpInside" id="tFV-CT-onh"/>
-                                                    </connections>
-                                                </button>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QtC-S6-Zau">
-                                                    <rect key="frame" x="2" y="3" width="70" height="70"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <outlet property="likesButton" destination="Kzj-BR-mIh" id="UD9-tC-YB2"/>
-                                            <outlet property="mainImageView" destination="D7j-at-Ao5" id="DrC-fr-Lj0"/>
-                                            <outlet property="profilePictureView" destination="QtC-S6-Zau" id="c4o-GF-nI8"/>
-                                            <outlet property="timeLabel" destination="5rk-pc-Kle" id="cd0-mf-7mk"/>
-                                            <outlet property="usernameLabel" destination="ZFx-cQ-bwH" id="MfV-qo-2u1"/>
-                                            <outlet property="whiteView" destination="7m7-Au-oAG" id="wcW-HP-bkI"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="textCell" rowHeight="136" id="hYq-sy-XWK" customClass="TextCell" customModule="SocialMediaApp" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="298" width="375" height="136"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hYq-sy-XWK" id="0kT-OU-Yv8">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pbs-um-BEH">
-                                                    <rect key="frame" x="8" y="8" width="359" height="128"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is a test label showing th possibilities of text within a cell" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9G-y8-9K6">
-                                                            <rect key="frame" x="73" y="27" width="199" height="93"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehV-Uz-7as">
-                                                            <rect key="frame" x="267" y="76" width="92" height="35"/>
-                                                            <color key="backgroundColor" red="0.13725490200000001" green="0.71764705880000002" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                            <state key="normal" title="n likes">
-                                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                            </state>
-                                                            <connections>
-                                                                <action selector="likesButtonPressed:" destination="hYq-sy-XWK" eventType="touchUpInside" id="cW9-CG-roa"/>
-                                                            </connections>
-                                                        </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15 seconds ago" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wqf-aI-p4y">
-                                                            <rect key="frame" x="204" y="8" width="110" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UserName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Rz-dh-BFK">
-                                                            <rect key="frame" x="94" y="8" width="82" height="21"/>
-                                                            <color key="backgroundColor" red="0.66386192639999997" green="0.67580520840000002" blue="0.67843137249999996" alpha="0.0" colorSpace="calibratedRGB"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" red="0.14117647059999999" green="0.67843137249999996" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BDP-ZW-HGy">
-                                                            <rect key="frame" x="-6" y="-7" width="70" height="70"/>
-                                                        </imageView>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </view>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <outlet property="likesButton" destination="ehV-Uz-7as" id="4WF-YA-xP5"/>
-                                            <outlet property="profilePictureImageView" destination="BDP-ZW-HGy" id="Fu6-60-umN"/>
-                                            <outlet property="textOutputLabel" destination="P9G-y8-9K6" id="wGA-L5-X1K"/>
-                                            <outlet property="timeLabel" destination="Wqf-aI-p4y" id="gca-3e-LDu"/>
-                                            <outlet property="usernameLabel" destination="6Rz-dh-BFK" id="meT-tW-Wgc"/>
-                                            <outlet property="whiteView" destination="Pbs-um-BEH" id="Z8g-lg-swS"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="rNI-cc-Qvn" id="ADJ-rg-s8o"/>
-                                    <outlet property="delegate" destination="rNI-cc-Qvn" id="TjY-q6-0Ki"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="Back" id="Jxb-ny-QqX"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="tableView" destination="2lc-M6-CI2" id="mbe-ks-xMt"/>
-                        <segue destination="22E-vh-cKL" kind="show" identifier="feedToImagePostSegue" id="7JQ-4v-2j9"/>
-                        <segue destination="Y62-7K-iPR" kind="show" identifier="feedToTextPostSegue" id="r4V-Ia-OIa"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i8V-g5-Q7I" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1875.5" y="554.5"/>
-        </scene>
-        <!--Friends-->
-        <scene sceneID="AgR-sB-cjW">
-            <objects>
-                <viewController id="2Kz-Fl-QpZ" customClass="FriendsViewController" customModule="SocialMediaApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="IP9-Bp-7Rc"/>
-                        <viewControllerLayoutGuide type="bottom" id="OFV-8q-BRD"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="q1T-LO-W2M">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5P-K2-nFp">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Friends" id="xQg-sF-EvF"/>
-                                </items>
-                            </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="91" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="RgH-L3-Mae">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendsListCell" rowHeight="91" id="VRq-gz-4YO" customClass="FriendListTableViewCell" customModule="SocialMediaApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VRq-gz-4YO" id="cfH-cs-DDt">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5p3-vs-bjI">
-                                                    <rect key="frame" x="8" y="22" width="359" height="69"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfy-gn-3rQ">
-                                                            <rect key="frame" x="93" y="8" width="235" height="53"/>
-                                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="21"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </view>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3XC-Ja-NaU">
-                                                    <rect key="frame" x="6" y="2" width="83" height="83"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <outlet property="profilePictureImageView" destination="3XC-Ja-NaU" id="c7F-w1-MUl"/>
-                                            <outlet property="usernameLabel" destination="Lfy-gn-3rQ" id="xQW-Lz-3c2"/>
-                                            <outlet property="whiteView" destination="5p3-vs-bjI" id="jlx-Vy-EyD"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="2Kz-Fl-QpZ" id="nZR-bx-Mr0"/>
-                                    <outlet property="delegate" destination="2Kz-Fl-QpZ" id="WDR-Bk-pGP"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Friends" image="first" selectedImage="second" id="6g1-Yt-8GG"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="tableView" destination="RgH-L3-Mae" id="Y1U-qA-4u3"/>
-                        <segue destination="rNI-cc-Qvn" kind="show" identifier="toFriendsProfileSegue" id="LSe-6G-bQa"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fVG-tD-yVT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="362.5" y="1910.5"/>
+            <point key="canvasLocation" x="737.5" y="1173.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="cWL-nO-Cai">
@@ -1136,7 +855,6 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="c1w-Tr-6BT" kind="relationship" relationship="viewControllers" id="yaR-7k-2Uh"/>
-                        <segue destination="2Kz-Fl-QpZ" kind="relationship" relationship="viewControllers" id="3nI-j3-jAH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -1158,10 +876,9 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Mq3-AO-48j"/>
         <segue reference="Nyy-FJ-xYV"/>
-        <segue reference="Vjv-B0-Gr2"/>
-        <segue reference="7JQ-4v-2j9"/>
-        <segue reference="gta-2j-BMc"/>
-        <segue reference="r4V-Ia-OIa"/>
+        <segue reference="ZC4-d6-HnG"/>
+        <segue reference="tYK-uj-ZZe"/>
     </inferredMetricsTieBreakers>
 </document>

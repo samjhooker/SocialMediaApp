@@ -70,6 +70,7 @@ class TextCell: UITableViewCell {
         
         
         if object != nil{
+            println("object is awesome \(object)")
             //retrieve image
             
             var data: AnyObject = object.objectForKey("profilePicture")[0]
@@ -105,7 +106,9 @@ class TextCell: UITableViewCell {
     
     override func layoutSubviews() {
         
+        println(object)
         if object != nil{
+            println("object is awesome \(object)")
             //retrieve image
             
             var data: AnyObject = object.objectForKey("profilePicture")[0]

@@ -134,5 +134,5 @@ class ProfileHeaderTableViewCell: UITableViewCell, UIImagePickerControllerDelega
         
     }
     
-
+    
 }
