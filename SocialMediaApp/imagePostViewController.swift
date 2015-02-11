@@ -112,8 +112,11 @@ class imagePostViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
+        
+        println("prepare for segue")
         var view = segue.destinationViewController as RandomUserProfileViewController
         view.username = sender as String
+        println("username \(view.username)")
         
     }
     

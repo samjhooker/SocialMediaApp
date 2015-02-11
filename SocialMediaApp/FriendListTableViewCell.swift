@@ -22,7 +22,7 @@ class FriendListTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.awakeFromNib()
         // Initialization code
-        usernameLabel.text = user.objectForKey("username") as String
+        usernameLabel.text = user.objectForKey("username") as? String
         
         
         var data: AnyObject = user.objectForKey("profilePicture")[0]

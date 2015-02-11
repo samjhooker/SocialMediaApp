@@ -42,6 +42,7 @@ class ProfileHeaderTableViewCell: UITableViewCell, UIImagePickerControllerDelega
         
         profilePictureImageView.layer.masksToBounds = true
         var blur:UIBlurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+        
         var effectView:UIVisualEffectView = UIVisualEffectView (effect: blur)
         effectView.frame = profilePictureImageView.frame
         profilePictureImageView.addSubview(effectView)

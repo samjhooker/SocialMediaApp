@@ -84,6 +84,8 @@ class RandomProfileHeaderTableViewCell: UITableViewCell {
         
     }
     
+
+    
     
     
 
@@ -103,9 +105,25 @@ class RandomProfileHeaderTableViewCell: UITableViewCell {
             found = true
             friendButton.setTitle("Added as a friend", forState: UIControlState.Normal)
             
-            PFUser.currentUser().addObject(user.username, forKey: "friends")
+            //PFUser.currentUser().addObject(user.username, forKey: "friends")
+            //
             
+            println("want to become friends")
             
+            var query = PFUser.query()
+            query.getObjectInBackgroundWithId(user.objectId) {
+                (returnedUser: PFObject!, error: NSError!) -> Void in
+                if error != nil {
+                    NSLog("%@", error)
+                } else {
+                    
+                    println("trying  to become friends")
+                    returnedUser.addObject(self.user.username, forKey: "friends")
+                    
+                    returnedUser.save()
+                    println("have become friends")
+                }
+            }
             
         }
         

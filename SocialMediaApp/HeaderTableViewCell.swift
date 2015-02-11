@@ -20,6 +20,10 @@ class HeaderTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         
+        
+    
+        
+        
         var data: AnyObject = kCurrentUser.objectForKey("profilePicture")[0]
         
         

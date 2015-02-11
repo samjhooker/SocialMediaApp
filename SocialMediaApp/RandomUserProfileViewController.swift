@@ -19,20 +19,22 @@ class RandomUserProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        var query = PFUser.query()
-        query.whereKey("username", equalTo: username)
-        
-        var userArray = query.findObjects() as [PFUser]
-        user = userArray[0]
-        
-        
+        if user == nil{
+            
+            var query = PFUser.query()
+            query.whereKey("username", equalTo: username)
+            
+            var userArray = query.findObjects() as [PFUser]
+            user = userArray[0]
+            
+        }
         
         
         // Do any additional setup after loading the view.
     }
-
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

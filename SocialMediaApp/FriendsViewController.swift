@@ -15,12 +15,12 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var tableView: UITableView!
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        self.getFriends()
-    }
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
+//        // Do any additional setup after loading the view.
+//        self.getFriends()
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -69,11 +69,11 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
-    //override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(animated: Bool) {
         
-       // getFriends()
+        getFriends()
         
-   // }
+    }
     
     
    
@@ -87,7 +87,7 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         var friendslist = PFUser.currentUser().objectForKey("friends") as [String]
         println(friendslist)
-        friends = []
+        //friends = []
         
         var queryList:[PFQuery]=[]
         
@@ -111,7 +111,6 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
             
             
-        println("friends : \(friends)")
         tableView.reloadData()
     }
 
