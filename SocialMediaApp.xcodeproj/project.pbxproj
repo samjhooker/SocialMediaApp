@@ -42,6 +42,7 @@
 		7E61B2BB1A7DFCF00081846C /* ProfileHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E61B2BA1A7DFCF00081846C /* ProfileHeaderTableViewCell.swift */; };
 		7E61B2BD1A7DFE580081846C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E61B2BC1A7DFE580081846C /* ProfileViewController.swift */; };
 		7E61B2BF1A7EECA30081846C /* textPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E61B2BE1A7EECA30081846C /* textPostViewController.swift */; };
+		7EF252FA1A8C60DA00BCD6A9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF252F91A8C60DA00BCD6A9 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		7E61B2BA1A7DFCF00081846C /* ProfileHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		7E61B2BC1A7DFE580081846C /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7E61B2BE1A7EECA30081846C /* textPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = textPostViewController.swift; sourceTree = "<group>"; };
+		7EF252F91A8C60DA00BCD6A9 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				7E61B2BE1A7EECA30081846C /* textPostViewController.swift */,
 				7E61B2BA1A7DFCF00081846C /* ProfileHeaderTableViewCell.swift */,
 				7E61B2BC1A7DFE580081846C /* ProfileViewController.swift */,
+				7EF252F91A8C60DA00BCD6A9 /* SearchViewController.swift */,
 				7E2911731A7B8901002C43A0 /* TextCell.swift */,
 				7E2911711A7B869C002C43A0 /* ContentCell.swift */,
 				7E2911751A7C0796002C43A0 /* Global.swift */,
@@ -335,6 +338,7 @@
 				7E2911761A7C0796002C43A0 /* Global.swift in Sources */,
 				7E61B2BD1A7DFE580081846C /* ProfileViewController.swift in Sources */,
 				7E3369241A7EF7A300E2B1F9 /* imagePostViewController.swift in Sources */,
+				7EF252FA1A8C60DA00BCD6A9 /* SearchViewController.swift in Sources */,
 				7E2911C21A7C18AB002C43A0 /* loginViewController.swift in Sources */,
 				7E2911501A7B7F85002C43A0 /* AppDelegate.swift in Sources */,
 				7E61B2BF1A7EECA30081846C /* textPostViewController.swift in Sources */,

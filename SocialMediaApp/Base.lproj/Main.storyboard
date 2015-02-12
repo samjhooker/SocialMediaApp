@@ -588,6 +588,40 @@
             </objects>
             <point key="canvasLocation" x="-256.5" y="673.5"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="7q8-7l-uSw">
+            <objects>
+                <viewController id="esc-PW-KyC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FJd-eC-tMD"/>
+                        <viewControllerLayoutGuide type="bottom" id="obd-Pa-wu1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eTH-r9-DtG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Name or Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UUx-dn-BxX">
+                                <rect key="frame" x="78" y="158" width="218" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zz3-Ba-b8r">
+                                <rect key="frame" x="248" y="196" width="48" height="30"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="PZe-Kg-ODD"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OoO-ZC-WbM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="159.5" y="1446.5"/>
+        </scene>
         <!--Profile-->
         <scene sceneID="CJK-JN-jBx">
             <objects>
@@ -855,11 +889,12 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="c1w-Tr-6BT" kind="relationship" relationship="viewControllers" id="yaR-7k-2Uh"/>
+                        <segue destination="esc-PW-KyC" kind="relationship" relationship="viewControllers" id="7fz-L6-wNd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="175.5" y="-1.5"/>
+            <point key="canvasLocation" x="255.5" y="130.5"/>
         </scene>
     </scenes>
     <resources>
